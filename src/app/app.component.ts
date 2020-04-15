@@ -22,7 +22,7 @@ export class AppComponent  {
   }   
    polaB(var2,pow){
     var counter = 1;
-    for(var i= var2 ;i< pow ;i++){
+    for(var i= var2 ;i< pow ;i--){
       for(var j = 0 ;j< i;j ++){
         document.write("x");
       }
