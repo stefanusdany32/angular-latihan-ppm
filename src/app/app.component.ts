@@ -21,6 +21,6 @@ export class AppComponent  {
       this.nama.push(namaj);
       this.penjelasan.push(penj);
       this.router.navigate(['/home',this.nama]);
-       this.router.navigate(['/home',this.penjelasan]);
+      this.router.navigate(['/home',this.penjelasan]);
     }
 }

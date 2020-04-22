@@ -9,9 +9,15 @@ import {ActivatedRoute} from '@angular/router';
 export class HomeComponent implements OnInit {
 
   constructor(private route:ActivatedRoute) { }
-
+ nama = [];
+  
+  penjelasan =[];
+ 
   ngOnInit() {
-     let nama =this.route.snapshot.paramMap.get('nama');
-  }
+   
+    this.nama = ['infor','hotel'];
+    this.penjelasan = ['Halo','halo'];
+    //name.push('hotel');
+     }
 
 }
