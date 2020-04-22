@@ -1,5 +1,5 @@
 <hello name="{{ name }}"></hello>
-<p>
+<!-- <p>
   input1:
 </p>
 <input [(ngModel)]="input1" type="text"> 
@@ -21,6 +21,8 @@
   <p>ganjil gan</p>
   <button (click)="polaB(input2,hasil)">pola B</button>
 </ng-template>
-<div id="Pola"></div>
-
-
+<div id="Pola"></div> -->
+<a routerLink="/home">Home</a>
+<button (click)="home2()">HOME2</button>
+<button (click)="homepass()">HOME dengan pass</button>
+<router-outlet></router-outlet>

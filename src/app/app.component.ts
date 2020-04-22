@@ -1,39 +1,20 @@
-import { Component, Output } from '@angular/core';
+import { Component } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
   styleUrls: [ './app.component.css' ]
+
 })
+
 export class AppComponent  {
   name = 'Angular';
-  hasil=0
-  pow(var1,var2){
-  this.hasil = Math.pow(var1,var2);
-  };
-    
-    polaA(var1,pow){
-    for(var i= var1 ;i< pow;i++){
-      for(var j = 0 ;j< i;j ++){
-        document.write("x");
-      }
-      document.write("<br/>");
+  constructor(private router : Router){}
+    home2(){
+      this.router.navigate(['/home2']);
     }
-  }   
-   polaB(var2,pow){
-    var counter = 1;
-    for(var i= var2 ;i< pow ;i--){
-      for(var j = 0 ;j< i;j ++){
-        document.write("x");
-      }
-      document.write("<br/>");
+    homepass(){
+      this.router.navigate(['/home',3]);
     }
-     var m = 0
-      while( m < counter && counter <= pow ){
-        m++;
-        document.writeln("O")
-      }
-      document.writeln("<br/>");
-      counter++;
-    }
- }
+}
