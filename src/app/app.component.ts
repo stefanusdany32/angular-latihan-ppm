@@ -18,7 +18,7 @@ export class AppComponent  {
   constructor(private router : Router){}
    
     add(namaj, penj){
-      this.nama.push(namaj);
+      this.nama.push[namaj];
       this.penjelasan.push(penj);
       this.router.navigate(['/home',this.nama]);
        this.router.navigate(['/home',this.penjelasan]);
