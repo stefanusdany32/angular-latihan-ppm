@@ -22,7 +22,9 @@
   <button (click)="polaB(input2,hasil)">pola B</button>
 </ng-template>
 <div id="Pola"></div> -->
-<a routerLink="/home">Home</a>
-<button (click)="home2()">HOME2</button>
-<button (click)="homepass()">HOME dengan pass</button>
+<label>Nama Jurusan: </label>
+<input [(ngModel)]="namaj" type="text"> <br>
+<label>Penjelasan Jurusan: </label>
+<input [(ngModel)]="penj" type="text"> <br>
+<button (click)="add(namaj,penj)">Add</button>
 <router-outlet></router-outlet>

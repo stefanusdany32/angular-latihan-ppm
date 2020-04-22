@@ -10,11 +10,17 @@ import {Router} from '@angular/router';
 
 export class AppComponent  {
   name = 'Angular';
+  nama = [];
+  
+  penjelasan :string[];
+ 
+
   constructor(private router : Router){}
-    home2(){
-      this.router.navigate(['/home2']);
-    }
-    homepass(){
-      this.router.navigate(['/home',3]);
+   
+    add(namaj, penj){
+      this.nama.push(namaj);
+      this.penjelasan.push(penj);
+      this.router.navigate(['/home',this.nama]);
+       this.router.navigate(['/home',this.penjelasan]);
     }
 }
