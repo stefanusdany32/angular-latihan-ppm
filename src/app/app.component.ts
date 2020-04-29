@@ -12,12 +12,12 @@ import{ GlobalService } from './global.service';
 export class AppComponent  {
   name = 'Angular';
   data : any;
-  constructor(private glob : GlobalService){}
+  constructor(private glob : GlobalService){this.data = this.glob.getData();}
    add(nama:string, penjelasan:string){
      let temp = {nama,penjelasan};
      this.glob.addData(temp);
    }
    view(){
-     this.data = this.glob.getData();
+     
    }
 }
