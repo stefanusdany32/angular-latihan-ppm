@@ -5,6 +5,7 @@
 <label>Penjelasan Jurusan: </label>
 <input [(ngModel)]="penj" type="text"> <br>
 <button (click)="add(namaj,penj)">Add</button><br>
+<button (click)="view()">View</button><br>
 <button (click)="edit(namaj,penj)">Edit</button><br>
 Nama jurusan :
 <div *ngFor="let data of nama; let i=index">
@@ -13,5 +14,8 @@ Nama jurusan :
 Penjelasan jurusan :
   <div *ngFor="let data of penjelasan;; let i=index">
   {{i+1}}. {{data}}
+  </div>
+  <div *ngFor="let isi of data">
+    {{isi}}
   </div>
 <router-outlet></router-outlet>

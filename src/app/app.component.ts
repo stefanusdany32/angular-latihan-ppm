@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {Router} from '@angular/router';
-import{ GlobalConstants } from './common/global-constants';
+import{ GlobalService } from './global.service';
 
 @Component({
   selector: 'my-app',
@@ -11,17 +11,13 @@ import{ GlobalConstants } from './common/global-constants';
 
 export class AppComponent  {
   name = 'Angular';
-  nama:string[] = [];
-  
-  penjelasan :string[];
- 
-
-  constructor(private router : Router){}
-   
-    add(namaj, penj){
-      GlobalConstants.nama.push(namaj);
-      GlobalConstants.penjelasan.push(penj);
-      this.nama = GlobalConstants.nama;
-      this.penjelasan = GlobalConstants.penjelasan;
-    }
+  data : any;
+  constructor(private glob : GlobalService){}
+   add(nama:string, penjelasan:string){
+     let temp = {nama,penjelasan};
+     this.glob.addData(temp);
+   }
+   view(){
+     this.data = this.glob.getData();
+   }
 }
