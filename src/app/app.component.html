@@ -1,32 +1,11 @@
 <hello name="{{ name }}"></hello>
-<!-- <p>
-  input1:
-</p>
-<input [(ngModel)]="input1" type="text"> 
-<p>
-  input2:
-</p>
-  <input [(ngModel)]="input2" type="text">
-  <p>
-<button (click)="pow(input1,input2)">tekan tombol</button>
-  </p>{{hasil}}
-<ng-template *ngIf="hasil%2==0;then showBlock;else notshowBlock">
-</ng-template>
 
-<ng-template #showBlock>
-  <p>genap gan</p>
-  <button (click)="polaA(input1,hasil)">pola A</button>
-</ng-template>
-<ng-template #notshowBlock>
-  <p>ganjil gan</p>
-  <button (click)="polaB(input2,hasil)">pola B</button>
-</ng-template>
-<div id="Pola"></div> -->
 <label>Nama Jurusan: </label>
 <input [(ngModel)]="namaj" type="text"> <br>
 <label>Penjelasan Jurusan: </label>
 <input [(ngModel)]="penj" type="text"> <br>
 <button (click)="add(namaj,penj)">Add</button><br>
+<button (click)="edit(namaj,penj)">Edit</button><br>
 Nama jurusan :
 <div *ngFor="let data of nama; let i=index">
   {{i+1}}. {{data}}

@@ -11,7 +11,7 @@ import{ GlobalConstants } from './common/global-constants';
 
 export class AppComponent  {
   name = 'Angular';
-  nama:string = [];
+  nama:string[] = [];
   
   penjelasan :string[];
  
