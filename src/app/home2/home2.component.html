@@ -1,3 +1,11 @@
-<p>
-home2 works!
-</p>
+
+<br>
+<br>
+<label>Index : </label>
+<input [(ngModel)]="index" type="text"> <br>
+<label>Nama Jurusan: </label>
+<input [(ngModel)]="namaj" type="text"> <br>
+<label>Penjelasan Jurusan: </label>
+<input [(ngModel)]="penj" type="text"> <br>
+
+<button (click)="change(index,namaj,penj)">Change</button><br>

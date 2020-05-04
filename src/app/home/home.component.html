@@ -1,3 +1,4 @@
-<p>
-home works! - {{idvarpass}}
-</p>
+<div *ngFor="let isi of data; let i=index">
+    {{i+1}}.{{isi}}
+  </div>
+<router-outlet></router-outlet>

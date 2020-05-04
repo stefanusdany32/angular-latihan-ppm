@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
+import{ GlobalService } from '../global.service';
 
 @Component({
   selector: 'app-home',
@@ -7,11 +8,14 @@ import {ActivatedRoute} from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  constructor(private route:ActivatedRoute) { }
+  data:any;
+  constructor(private route:ActivatedRoute,private glob : GlobalService) {
+    this.data = this.glob.getData();
+    
+   }
 
   ngOnInit() {
-     let nama =this.route.snapshot.paramMap.get('nama');
+     //console.log('ya');
   }
 
 }
